@@ -1,0 +1,221 @@
+:root{
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-pink: #dc143c;
+    --transition: .5s;
+    --font-body: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.container{
+     width: 100%;
+     height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url(../images-vinicola/images-vinicola/vinicolas/pexels-tim-mossholder-2331884.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.header-page{
+    height: 100px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-page h1{
+    color: var(--color-light);
+    font-size: 4vmin;
+}
+
+.header-page ul{
+    display: flex;
+    gap: 30px;
+}
+
+/************ Fim header ************/
+
+/************* hero *************/
+.hero{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    color: var(--color-light);
+    & h2 {
+        font-size: clamp(24px, 4vw, 50px);
+    }
+    & p{
+        width: 60%;
+        line-height: 1.6;
+    }
+}
+
+.btn-inicio{
+    border: 1px solid var(--color-pink);
+    padding: 8px 30px;
+    color: var(--color-light);
+    border-radius: 10px;    
+    transition: background-color var(--transition)
+}
+
+
+.btn-inicio:hover{
+    background: var(--color-pink);
+    color: var(--color-light); 
+}
+
+/************* fim hero *************/
+
+
+/************* wines *************/
+.wines{
+    width: 80%;
+    height: 100vh;
+    margin: 40px auto;
+}
+
+.wines h2{
+    margin: 30px 0px 50px;
+}
+
+.wines-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wines-item{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow:1px 1px 30px #ccc;
+    transition: scale .7s ;
+    border-radius: 7px;
+}
+
+.wines-item:hover{
+    scale: 1.1;
+}
+
+.wines-item img{
+    width: 30%;    
+}   
+/************* fim wines *************/
+
+/************* promoção *************/
+.wine-promotion{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    border-radius: 7px;
+}
+
+.wine-photo{
+    width: 45%;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.wine-photo img{
+    width: 70%;
+    box-shadow: 1px 1px 30px #aaa;
+    border-radius: 7px;
+}
+
+.wine-text{
+    width: 45%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px   ;
+}
+
+.wine-text h4{
+    color: var(--color-pink);
+    font-weight: 600;
+    margin-bottom: -40px;
+}
+
+.wine-text h3{
+    font-size: clamp(18px, 2vw, 35px);
+    text-wrap: balance;
+    line-height: 1.3;
+}
+
+.wine-text p{
+    width: 90%;
+}
+
+.wine-text a{
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+    border-width: 1px;
+}
+
+/*Fim*/
+
+@media(width <= 950px){
+    .wines-item{
+        width: 42%;
+    }
+    .wine-photo{
+        width: 80%;
+    }
+    .wine-text{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .wine-text h4{
+        display: none;
+    }
+}
+
+@media(width <= 650px){
+    .wines-item{
+        width: 88%;
+    }
+}
